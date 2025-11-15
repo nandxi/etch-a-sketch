@@ -26,3 +26,5 @@ button.addEventListener("click", () => {
   removeSquares(container)
   addSquares(squaresNo)
 })
+
+addSquares(16)
