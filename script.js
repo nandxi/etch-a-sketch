@@ -23,6 +23,9 @@ function removeSquares(container) {
 
 button.addEventListener("click", () => {
   let squaresNo = +prompt("Enter the number of squares per side: ")
+  while (squaresNo > 100) {
+    squaresNo = +prompt("Enter a number less than 100: ")
+  }
   removeSquares(container)
   addSquares(squaresNo)
 })
