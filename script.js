@@ -1,13 +1,22 @@
-let divArray = []
 let container = document.querySelector("#container")
+let button = document.querySelector("button")
 
-for(let i = 0; i < 16; i++) {
-  let rowDiv = document.createElement("div")
-  rowDiv.classList.add("row-div")
-  for(let j = 0; j < 16; j++) {
-    let div = document.createElement("div")
-    div.classList.add("div")
-    rowDiv.appendChild(div)
+function addSquares(sides) {
+  for(let i = 0; i < sides; i++) {
+    for(let j = 0; j < sides; j++) {
+      let div = document.createElement("div")
+      div.classList.add("div")
+      container.appendChild(div)
+      div.style.width = `${500 / sides}px`
+      div.style.height = `${500 / sides}px`
+      div.addEventListener("mouseenter", () => {
+        div.classList.add("colored")
+      })
+    }
   }
-  container.appendChild(rowDiv)
 }
+
+button.addEventListener("click", () => {
+  let squaresNo = +prompt("Enter the number of squares per side: ")
+  addSquares(squaresNo)
+})
