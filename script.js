@@ -7,11 +7,16 @@ function addSquares(sides) {
       container.appendChild(div)
       div.style.width = `${500 / sides}px`
       div.style.height = `${500 / sides}px`
+      div.style.opacity = 0.1
       div.addEventListener("mouseenter", () => {
         let red = Math.random() * 255
         let green = Math.random() * 255
         let blue = Math.random() * 255
         div.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+        opacity = parseFloat(div.style.opacity)
+        if (opacity !== 1) {
+          div.style.opacity = opacity + 0.1
+        }
     })
   }
 }
