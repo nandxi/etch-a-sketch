@@ -22,7 +22,7 @@ function addSquares(sides) {
 }
 
 function removeSquares(container) {
-  let divs = Array.from(document.querySelectorAll(".div"))
+  let divs = Array.from(document.querySelectorAll("div div"))
   for (let div of divs) {
     container.removeChild(div);
   }
