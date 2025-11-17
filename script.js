@@ -9,7 +9,10 @@ function addSquares(sides) {
       div.style.width = `${500 / sides}px`
       div.style.height = `${500 / sides}px`
       div.addEventListener("mouseenter", () => {
-        div.classList.add("colored")
+        let red = Math.random() * 255
+        let green = Math.random() * 255
+        let blue = Math.random() * 255
+        div.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
     })
   }
 }
