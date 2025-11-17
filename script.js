@@ -4,7 +4,6 @@ let button = document.querySelector("button")
 function addSquares(sides) {
   for(let i = 0; i < sides * sides; i++) {
     let div = document.createElement("div")
-      div.classList.add("div")
       container.appendChild(div)
       div.style.width = `${500 / sides}px`
       div.style.height = `${500 / sides}px`
