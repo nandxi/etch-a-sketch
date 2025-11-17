@@ -1,0 +1,1 @@
+# This project uses DOM manipulation techniques to create an etch a sketch
